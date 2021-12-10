@@ -1,1 +1,130 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --body-background: #010118;
+  --card-color: #00000c;
+  --button-bgcolor: #02bfcb;
+  --button-color: rgb(8, 0, 0);
+  --shadow-color: var(--button-bgcolor);
+}
+html {
+  font-size: 62.5%;
+}
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  background-color: var(--body-background);
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-size: 2.3rem;
+}
+.p1 {
+  font-size: 1.2rem;
+}
+@media screen and (min-width: 768px) {
+  .p1 {
+    font-size: 1.5rem;
+  }
+}
+a[href] {
+  text-decoration: none;
+  color: var(--button-color);
+}
+.main {
+  width: 100%;
+  height: 100%;
+}
+.grid-1x2 {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+@media screen and (min-width: 500px) {
+  .grid-1x2 {
+    grid-template-columns: repeat(2, 0.5fr);
+  }
+}
+.card {
+  font-size: 1.1rem;
+  width: 60%;
+  background-color: var(--card-color);
+  display: grid;
+  justify-items: center;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px var(--shadow-color);
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.upper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  padding-top: 1rem;
+}
+.images {
+  width: 75%;
+  height: 90%;
+  border: 2px solid var(--shadow-color);
+  border-radius: 100%;
+  background-color: rgb(162, 157, 157);
+}
+
+.submit {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--button-bgcolor);
+  border-radius: 5px;
+  outline: 0;
+  margin-top: 4rem;
+  padding: 1rem 0;
+  transition: all 0.5s;
+  color: black;
+  width: 70%;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .submit {
+    font-size: 1.8rem;
+  }
+}
+
+.submit:hover {
+  background-color: #004f55;
+}
+.pag {
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.3rem;
+  margin-top: 5rem;
+  background-color: #19636d;
+}
+.ngx-pagination {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,23 @@
+<div class="main grid-1x2">
+  <div
+    class="card"
+    *ngFor="let user of users | paginate: { itemsPerPage: 4, currentPage: p }"
+  >
+    <div class="upper">
+      <img class="images" src="../../../assets/17241-200.png" alt="" />
+    </div>
+    <div class="lower">
+      <h1>{{ user.username }}</h1>
+      <p class="p1">{{ user.email }}</p>
+      <a
+        class="submit"
+        [routerLink]="['/userPage']"
+        [queryParams]="{ id: user.id, name: user.name }"
+        >More Information</a
+      >
+    </div>
+  </div>
+</div>
+<div class="pag">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
